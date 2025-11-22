@@ -1,0 +1,16 @@
+import { Spectral } from "next/font/google";
+
+export const spectral200 = Spectral({subsets:['latin'],weight:"200"})
+export const spectral300 = Spectral({subsets:['latin'],weight:"300"})
+export const spectral400 = Spectral({subsets:['latin'],weight:"400"})
+export const spectral500 = Spectral({subsets:['latin'],weight:"500"})
+export const spectral600 = Spectral({subsets:['latin'],weight:"600"})
+export const spectral700 = Spectral({subsets:['latin'],weight:"700"})
+export const spectral800 = Spectral({subsets:['latin'],weight:"800"})
+export const spectral200Italic = Spectral({subsets:['latin'],weight:"200", style:'italic'})
+export const spectral300Italic = Spectral({subsets:['latin'],weight:"300", style:'italic'})
+export const spectral400Italic = Spectral({subsets:['latin'],weight:"400", style:'italic'})
+export const spectral500Italic = Spectral({subsets:['latin'],weight:"500", style:'italic'})
+export const spectral600Italic = Spectral({subsets:['latin'],weight:"600", style:'italic'})
+export const spectral700Italic = Spectral({subsets:['latin'],weight:"700", style:'italic'})
+export const spectral800Italic = Spectral({subsets:['latin'],weight:"800", style:'italic'})

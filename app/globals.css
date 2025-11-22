@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import "tailwindcss";
+
+
+
+@layer utilities {
+  .pause-animation {
+    animation-play-state: paused;
+  }
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --solana-gradient-duration: 10s;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-spectral:var(--font-spectral);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.solana-gradient-animated {
+    background: linear-gradient(131deg, #9945ff, #14f195, #9945ff);
+    background-size: 400% 400%;
+
+    -webkit-animation: AnimationName var(--solana-gradient-duration) ease infinite;
+    -moz-animation: AnimationName var(--solana-gradient-duration) ease infinite;
+    -o-animation: AnimationName var(--solana-gradient-duration) ease infinite;
+    animation: AnimationName var(--solana-gradient-duration) ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:5% 0%}
+    50%{background-position:96% 100%}
+    100%{background-position:5% 0%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:5% 0%}
+    50%{background-position:96% 100%}
+    100%{background-position:5% 0%}
+}
+@-o-keyframes AnimationName {
+    0%{background-position:5% 0%}
+    50%{background-position:96% 100%}
+    100%{background-position:5% 0%}
+}
+@keyframes AnimationName {
+    0%{background-position:5% 0%}
+    50%{background-position:96% 100%}
+    100%{background-position:5% 0%}
+}
+
+
+.logo-slider {
+  padding: 0.5em 0 0.5em 0;
+  width: 100vw;
+  max-width: 1022px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.logo-slider__track {
+  display: flex;
+  width: max-content;
+  animation: scroll 30s linear infinite;
+}
+
+.logo-slider__track:hover {
+  animation-play-state: paused;
+}
+
+.logo-slider__list {
+  display: flex;
+  gap: 10px;
+}
+
+.logo-slider__logo {
+  width: 150px;
+  height: 150px;
+  margin: 0 1rem;
+  border-radius: 10px;
+}
+
+/* Animation for marquee */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.logo-slider__track:nth-child(even) {
+  animation-direction: reverse;
+}
+
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar{
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
